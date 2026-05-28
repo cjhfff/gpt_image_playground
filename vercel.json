@@ -1,1 +1,13 @@
-{"$schema":"https://openapi.vercel.sh/vercel.json","git":{"deploymentEnabled":true}}
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "git": {"deploymentEnabled": true},
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {"key": "X-Frame-Options", "value": "ALLOWALL"},
+        {"key": "Content-Security-Policy", "value": "frame-ancestors *"}
+      ]
+    }
+  ]
+}
